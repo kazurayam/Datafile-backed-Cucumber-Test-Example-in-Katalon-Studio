@@ -14,9 +14,9 @@ import cucumber.api.java.en.When
 class HealthcareStepDefinition {
 
 	// custom class that provides accessor methods
-	private Credentials credentials
+	private final Credentials credentials
 
-	private final String DATA_FILE_NAME = "HealthcareCredentials"
+	private static final String DATA_FILE_NAME = "HealthcareCredentials"
 
 	HealthcareStepDefinition() {
 		TestData td = findTestData(DATA_FILE_NAME)
