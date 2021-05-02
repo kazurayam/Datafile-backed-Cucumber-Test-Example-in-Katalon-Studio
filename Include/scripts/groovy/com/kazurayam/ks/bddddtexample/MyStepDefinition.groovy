@@ -22,7 +22,7 @@ class MyStepDefinition {
 	}
 
 	/**
-	 * look up the password of the given username out of the "Data Files/Credentials" 
+	 * look up the password of a given username out of the "Data Files/Credentials" 
 	 */
 	String lookupPasswordOf(String username) {
 		for (def index : (1..data.getRowNumbers())) {
