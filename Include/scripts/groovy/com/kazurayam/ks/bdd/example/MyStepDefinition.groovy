@@ -1,9 +1,7 @@
-package com.kazurayam.ks.bddddtexample
+package com.kazurayam.ks.bdd.example
 
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
-
-import com.kms.katalon.core.testdata.TestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
@@ -12,27 +10,14 @@ import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
-
 class MyStepDefinition {
 
-	private TestData data
+	private CredentialsWrapper credentials
+
+	private final String DATA_FILE_NAME = "HealthcareCredentials"
 
 	MyStepDefinition() {
-		data = findTestData("Credentials")
-	}
-
-	/**
-	 * look up the password of a given username out of the "Data Files/Credentials" 
-	 */
-	String lookupPasswordOf(String username) {
-		for (def index : (1..data.getRowNumbers())) {
-			String uname = data.getValue("username", index)
-			String pswrd = data.getValue("password", index)
-			if (uname == username) {
-				return pswrd
-			}
-		}
-		return null
+		credentials = new CredentialsWrapper(findTestData(DATA_FILE_NAME))
 	}
 
 	/**
@@ -52,7 +37,7 @@ class MyStepDefinition {
 
 	@And("I enter a valid credential of (.*)")
 	def I_enter_valid_credential(String username) {
-		String password = lookupPasswordOf(username)
+		String password = credentials.lookupPasswordOf(username)
 		if (password != null) {
 			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_userName'), username)
 			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
@@ -74,7 +59,7 @@ class MyStepDefinition {
 
 	@And("I enter an invalid credential of (.*)")
 	def I_enter_invalid_credential(String username) {
-		String password = lookupPasswordOf(username)
+		String password = credentials.lookupPasswordOf(username)
 		if (password != null) {
 			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_username'), username)
 			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
