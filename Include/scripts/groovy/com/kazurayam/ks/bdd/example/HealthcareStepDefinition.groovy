@@ -3,6 +3,7 @@ package com.kazurayam.ks.bdd.example
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import cucumber.api.java.en.And
@@ -10,14 +11,16 @@ import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
-class MyStepDefinition {
+class HealthcareStepDefinition {
 
-	private CredentialsWrapper credentials
+	// custom class that provides accessor methods
+	private Credentials credentials
 
 	private final String DATA_FILE_NAME = "HealthcareCredentials"
 
-	MyStepDefinition() {
-		credentials = new CredentialsWrapper(findTestData(DATA_FILE_NAME))
+	HealthcareStepDefinition() {
+		TestData td = findTestData(DATA_FILE_NAME)
+		credentials = new Credentials(td)
 	}
 
 	/**
@@ -68,10 +71,10 @@ class MyStepDefinition {
 		}
 	}
 
-
 	@Then("I should NOT be able to login successfully")
 	def I_login_unsuccessfully() {
 		WebUI.verifyTextPresent('Login failed! Please ensure the username and password are valid.', false)
 		WebUI.closeBrowser()
 	}
+
 }

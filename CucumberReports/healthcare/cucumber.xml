@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="17.854924">
-<testcase classname="Login Feature" name="Login with a valid credential" time="9.090122">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="18.657669">
+<testcase classname="Login Feature" name="Login with a valid credential" time="9.162688">
 <system-out><![CDATA[Given I navigate to Cura System homepage....................................passed
 When I click Make Appointment button........................................passed
 And I enter a valid credential of John Doe..................................passed
@@ -8,7 +8,7 @@ And I click Log in button...................................................pass
 Then I should be able to login successfully.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login Feature" name="Login with an invalid credential" time="8.764802">
+<testcase classname="Login Feature" name="Login with an invalid credential" time="9.494981">
 <system-out><![CDATA[Given I navigate to Cura System homepage....................................passed
 When I click Make Appointment button........................................passed
 And I enter an invalid credential of FakeName...............................passed

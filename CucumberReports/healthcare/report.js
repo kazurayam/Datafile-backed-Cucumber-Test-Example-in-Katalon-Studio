@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Include/features/healthcare/New Feature File.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Include/features/healthcare/CuraLogin.feature");
 formatter.feature({
   "name": "Login Feature",
   "description": "  As a user, I want to login to Cura System\n  so that I can make an appointment.",
@@ -74,7 +74,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_navigate_to_Cura_System_homepage()"
+  "location": "HealthcareStepDefinition.I_navigate_to_Cura_System_homepage()"
 });
 formatter.result({
   "status": "passed"
@@ -84,7 +84,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_click_makeAppointment_button()"
+  "location": "HealthcareStepDefinition.I_click_makeAppointment_button()"
 });
 formatter.result({
   "status": "passed"
@@ -94,7 +94,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_enter_valid_credential(String)"
+  "location": "HealthcareStepDefinition.I_enter_valid_credential(String)"
 });
 formatter.result({
   "status": "passed"
@@ -104,7 +104,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_click_login_btn()"
+  "location": "HealthcareStepDefinition.I_click_login_btn()"
 });
 formatter.result({
   "status": "passed"
@@ -114,7 +114,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_login_successfully()"
+  "location": "HealthcareStepDefinition.I_login_successfully()"
 });
 formatter.result({
   "status": "passed"
@@ -184,7 +184,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_navigate_to_Cura_System_homepage()"
+  "location": "HealthcareStepDefinition.I_navigate_to_Cura_System_homepage()"
 });
 formatter.result({
   "status": "passed"
@@ -194,7 +194,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_click_makeAppointment_button()"
+  "location": "HealthcareStepDefinition.I_click_makeAppointment_button()"
 });
 formatter.result({
   "status": "passed"
@@ -204,7 +204,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_enter_invalid_credential(String)"
+  "location": "HealthcareStepDefinition.I_enter_invalid_credential(String)"
 });
 formatter.result({
   "status": "passed"
@@ -214,7 +214,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_click_login_btn()"
+  "location": "HealthcareStepDefinition.I_click_login_btn()"
 });
 formatter.result({
   "status": "passed"
@@ -224,7 +224,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_login_unsuccessfully()"
+  "location": "HealthcareStepDefinition.I_login_unsuccessfully()"
 });
 formatter.result({
   "status": "passed"

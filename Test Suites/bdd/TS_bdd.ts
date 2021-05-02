@@ -15,6 +15,6 @@
       <guid>12788986-dd09-4f48-b4d9-3ca55fd264ec</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/bdd/runFeaturesWithCredentialsWrapper</testCaseId>
+      <testCaseId>Test Cases/bdd/runCuraLoginFeatures</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

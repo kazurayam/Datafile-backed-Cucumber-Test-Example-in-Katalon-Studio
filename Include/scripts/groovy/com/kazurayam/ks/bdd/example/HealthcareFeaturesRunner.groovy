@@ -6,7 +6,9 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="Include/features/healthcare", glue="", plugin = ["pretty",
+@CucumberOptions(features="Include/features/healthcare",
+// glue="",           // glue is defined by "Test Listeners/HealthcareCucuberTestGLUE.groovy"
+plugin = [	"pretty",
 	"junit:CucumberReports/healthcare/cucumber.xml",
 	"html:CucumberReports/healthcare",
 	"json:CucumberReports/healthcare/cucumber.json"])

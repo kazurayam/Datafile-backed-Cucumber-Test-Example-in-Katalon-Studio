@@ -12,31 +12,31 @@
         "steps": [
           {
             "result": {
-              "duration": 6866061316,
+              "duration": 6894722332,
               "status": "passed"
             },
             "line": 28,
             "name": "I navigate to Cura System homepage",
             "match": {
-              "location": "MyStepDefinition.I_navigate_to_Cura_System_homepage()"
+              "location": "HealthcareStepDefinition.I_navigate_to_Cura_System_homepage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 599874022,
+              "duration": 569921837,
               "status": "passed"
             },
             "line": 29,
             "name": "I click Make Appointment button",
             "match": {
-              "location": "MyStepDefinition.I_click_makeAppointment_button()"
+              "location": "HealthcareStepDefinition.I_click_makeAppointment_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 633947258,
+              "duration": 702094851,
               "status": "passed"
             },
             "line": 30,
@@ -48,31 +48,31 @@
                   "offset": 30
                 }
               ],
-              "location": "MyStepDefinition.I_enter_valid_credential(String)"
+              "location": "HealthcareStepDefinition.I_enter_valid_credential(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 681294461,
+              "duration": 657147393,
               "status": "passed"
             },
             "line": 31,
             "name": "I click Log in button",
             "match": {
-              "location": "MyStepDefinition.I_click_login_btn()"
+              "location": "HealthcareStepDefinition.I_click_login_btn()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 278547744,
+              "duration": 297578497,
               "status": "passed"
             },
             "line": 32,
             "name": "I should be able to login successfully",
             "match": {
-              "location": "MyStepDefinition.I_login_successfully()"
+              "location": "HealthcareStepDefinition.I_login_successfully()"
             },
             "keyword": "Then "
           }
@@ -96,31 +96,31 @@
         "steps": [
           {
             "result": {
-              "duration": 6744252315,
+              "duration": 7238077707,
               "status": "passed"
             },
             "line": 40,
             "name": "I navigate to Cura System homepage",
             "match": {
-              "location": "MyStepDefinition.I_navigate_to_Cura_System_homepage()"
+              "location": "HealthcareStepDefinition.I_navigate_to_Cura_System_homepage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 551683432,
+              "duration": 590447156,
               "status": "passed"
             },
             "line": 41,
             "name": "I click Make Appointment button",
             "match": {
-              "location": "MyStepDefinition.I_click_makeAppointment_button()"
+              "location": "HealthcareStepDefinition.I_click_makeAppointment_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 576892718,
+              "duration": 723366811,
               "status": "passed"
             },
             "line": 42,
@@ -132,31 +132,31 @@
                   "offset": 33
                 }
               ],
-              "location": "MyStepDefinition.I_enter_invalid_credential(String)"
+              "location": "HealthcareStepDefinition.I_enter_invalid_credential(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 621555610,
+              "duration": 655953304,
               "status": "passed"
             },
             "line": 43,
             "name": "I click Log in button",
             "match": {
-              "location": "MyStepDefinition.I_click_login_btn()"
+              "location": "HealthcareStepDefinition.I_click_login_btn()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 261472374,
+              "duration": 268626929,
               "status": "passed"
             },
             "line": 44,
             "name": "I should NOT be able to login successfully",
             "match": {
-              "location": "MyStepDefinition.I_login_unsuccessfully()"
+              "location": "HealthcareStepDefinition.I_login_unsuccessfully()"
             },
             "keyword": "Then "
           }
@@ -175,7 +175,7 @@
     "description": "  As a user, I want to login to Cura System\n  so that I can make an appointment.",
     "id": "login-feature",
     "keyword": "Feature",
-    "uri": "Include/features/healthcare/New Feature File.feature",
+    "uri": "Include/features/healthcare/CuraLogin.feature",
     "tags": [
       {
         "name": "@Login",
