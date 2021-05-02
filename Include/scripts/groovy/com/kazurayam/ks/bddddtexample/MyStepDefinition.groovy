@@ -1,6 +1,9 @@
 package com.kazurayam.ks.bddddtexample
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+
+import com.kms.katalon.core.testdata.TestData
 
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
@@ -11,6 +14,26 @@ import cucumber.api.java.en.When
 
 
 class MyStepDefinition {
+
+	private TestData data
+
+	MyStepDefinition() {
+		data = findTestData("Credentials")
+	}
+
+	/**
+	 * look up the password of the given username out of the "Data Files/Credentials" 
+	 */
+	String lookupPasswordOf(String username) {
+		for (def index : (1..data.getRowNumbers())) {
+			String uname = data.getValue("username", index)
+			String pswrd = data.getValue("password", index)
+			if (uname == username) {
+				return pswrd
+			}
+		}
+		return null
+	}
 
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
@@ -27,10 +50,15 @@ class MyStepDefinition {
 		WebUI.click(findTestObject('Page_CURA Healthcare Service/a_Make Appointment'))
 	}
 
-	@And("I enter username (.*) and password (.*)")
-	def I_enter_valid_username_password(String username, String password) {
-		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_userName'), username)
-		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
+	@And("I enter a valid credential of (.*)")
+	def I_enter_valid_credential(String username) {
+		String password = lookupPasswordOf(username)
+		if (password != null) {
+			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_userName'), username)
+			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
+		} else {
+			throw new IllegalStateException("usernamae ${username} is not found")
+		}
 	}
 
 	@And("I click Log in button")
@@ -44,10 +72,15 @@ class MyStepDefinition {
 		WebUI.closeBrowser()
 	}
 
-	@And("I enter an invalid username (.*) and password (.*)")
-	def I_enter_invalid_username_password(String username, String password) {
-		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_username'), username)
-		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
+	@And("I enter an invalid credential of (.*)")
+	def I_enter_invalid_credential(String username) {
+		String password = lookupPasswordOf(username)
+		if (password != null) {
+			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_username'), username)
+			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
+		} else {
+			throw new IllegalStateException("username ${username} is not found")
+		}
 	}
 
 

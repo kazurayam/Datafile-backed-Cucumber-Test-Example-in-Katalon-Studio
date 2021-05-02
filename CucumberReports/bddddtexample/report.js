@@ -28,7 +28,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "I enter username \u003cusername\u003e and password \u003cpassword\u003e",
+  "name": "I enter a valid credential of \u003cusername\u003e",
   "keyword": "And "
 });
 formatter.step({
@@ -46,14 +46,12 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "username",
-        "password"
+        "username"
       ]
     },
     {
       "cells": [
-        "John Doe",
-        "ThisIsNotAPassword"
+        "John Doe"
       ]
     }
   ]
@@ -92,11 +90,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter username John Doe and password ThisIsNotAPassword",
+  "name": "I enter a valid credential of John Doe",
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_enter_valid_username_password(String,String)"
+  "location": "MyStepDefinition.I_enter_valid_credential(String)"
 });
 formatter.result({
   "status": "passed"
@@ -140,7 +138,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "I enter an invalid username \u003cusername\u003e and password \u003cpassword\u003e",
+  "name": "I enter an invalid credential of \u003cusername\u003e",
   "keyword": "And "
 });
 formatter.step({
@@ -158,14 +156,12 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "username",
-        "password"
+        "username"
       ]
     },
     {
       "cells": [
-        "Jane Doe",
-        "ThisIsNotAPassword"
+        "FakeName"
       ]
     }
   ]
@@ -204,11 +200,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter an invalid username Jane Doe and password ThisIsNotAPassword",
+  "name": "I enter an invalid credential of FakeName",
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyStepDefinition.I_enter_invalid_username_password(String,String)"
+  "location": "MyStepDefinition.I_enter_invalid_credential(String)"
 });
 formatter.result({
   "status": "passed"

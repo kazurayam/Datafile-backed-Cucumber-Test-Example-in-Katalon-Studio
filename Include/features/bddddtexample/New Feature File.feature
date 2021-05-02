@@ -26,22 +26,22 @@ Feature: Login Feature
   Scenario Outline: Login with a valid credential
     Given I navigate to Cura System homepage
     When I click Make Appointment button
-    And I enter username <username> and password <password>
+    And I enter a valid credential of <username>
     And I click Log in button 
 	Then I should be able to login successfully
 
     Examples: 
-      | username | password           |
-      | John Doe | ThisIsNotAPassword |
+      | username |
+      | John Doe |
 
   @InValid
   Scenario Outline: Login with an invalid credential
     Given I navigate to Cura System homepage
     When I click Make Appointment button
-    And I enter an invalid username <username> and password <password>
+    And I enter an invalid credential of <username>
     And I click Log in button
 	Then I should NOT be able to login successfully
 
     Examples: 
-      | username | password           |
-      | Jane Doe | ThisIsNotAPassword |
+      | username |
+      | FakeName |
