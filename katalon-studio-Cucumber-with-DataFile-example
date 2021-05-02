@@ -6,7 +6,7 @@
    <UUID>8320af05-16f5-407f-a439-454d8c1aa3ce</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/katalon-studio-BDD-DDT-example/katalon-studio-BDD-DDT-example.prj</projectFileLocation>
+   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/katalon-studio-Cucumber-with-DataFile-example/katalon-studio-Cucumber-with-DataFile-example.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
