@@ -127,11 +127,12 @@ Please be note that the reports can be in any spoken languages: e.g, English, Ru
 
 I made a set of Katalon Test Cases/Test Suite that do the same test senario as the Cucumber demo.
 
-- [Test Cases/plainKS/LoginValidCredential](Test Cases/plainKS/LoginValidCredential.tc)
-- [Test Cases/plainKS/LoginInvalidCredential](Test Cases/plainKS/LoginValidCredential.tc)
+- [Test Cases/plainKS/LoginValidCredential](Scripts/plainKS/LoginValidCredential/Script1619951082993.groovy)
+- [Test Cases/plainKS/LoginInvalidCredential](Scripts/plainKS/LoginInvalidCredential/Script1619951615393.groovy)
 
 These plain-old Katalon Test Cases refers to the Test Data `HealthcareCredentails` just in the same way as the Cucumber Step Defintion does. In fact, there is very little difference between them in terms of test fixture management.
 
+You can run `Test Suites/plainKS/TS_plan` to see how these Test Cases ran. No different from the Cucumber test.
 
 
 
