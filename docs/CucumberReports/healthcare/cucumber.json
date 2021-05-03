@@ -1,0 +1,190 @@
+[
+  {
+    "line": 21,
+    "elements": [
+      {
+        "line": 36,
+        "name": "Login with a valid credential",
+        "description": "",
+        "id": "login-feature;login-with-a-valid-credential;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6147820040,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I navigate to Cura System homepage",
+            "match": {
+              "location": "HealthcareStepDefinition.I_navigate_to_Cura_System_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 612359163,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I click Make Appointment button",
+            "match": {
+              "location": "HealthcareStepDefinition.I_click_makeAppointment_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 640379763,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I enter a valid credential of John Doe and will retrieve password from Test Data",
+            "match": {
+              "arguments": [
+                {
+                  "val": "John Doe",
+                  "offset": 30
+                }
+              ],
+              "location": "HealthcareStepDefinition.I_enter_valid_credential(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 817591828,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I click Log in button",
+            "match": {
+              "location": "HealthcareStepDefinition.I_click_login_btn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 264785892,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I should be able to login successfully",
+            "match": {
+              "location": "HealthcareStepDefinition.I_login_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@Valid"
+          }
+        ]
+      },
+      {
+        "line": 48,
+        "name": "Login with an invalid credential",
+        "description": "",
+        "id": "login-feature;login-with-an-invalid-credential;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4781885032,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I navigate to Cura System homepage",
+            "match": {
+              "location": "HealthcareStepDefinition.I_navigate_to_Cura_System_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 568330915,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I click Make Appointment button",
+            "match": {
+              "location": "HealthcareStepDefinition.I_click_makeAppointment_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 672043064,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I enter an invalid credential of FakeName and will retrieve password from Test Data",
+            "match": {
+              "arguments": [
+                {
+                  "val": "FakeName",
+                  "offset": 33
+                }
+              ],
+              "location": "HealthcareStepDefinition.I_enter_invalid_credential(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 613750907,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I click Log in button",
+            "match": {
+              "location": "HealthcareStepDefinition.I_click_login_btn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 338091965,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I should NOT be able to login successfully",
+            "match": {
+              "location": "HealthcareStepDefinition.I_login_unsuccessfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@InValid"
+          }
+        ]
+      }
+    ],
+    "name": "Login Feature",
+    "description": "  As a user, I want to login to Cura System\n  so that I can make an appointment.",
+    "id": "login-feature",
+    "keyword": "Feature",
+    "uri": "Include/features/healthcare/CuraLogin.feature",
+    "tags": [
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 20,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

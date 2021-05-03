@@ -113,7 +113,7 @@ This is the way how I used the Katalon's Test Data feature in a Cucumber test.
 ## How to run the Cucumber demo
 
 1. In Katalon Studio while you have this project opened, open `Test Cases/bdd/runCuraLoginFeatures` and just run it.
-2. The test will create a folder `CucumberReports/healthcare/` where test reports in [HTML](https://kazurayam.github.io/katalon-studio-Cucumber-with-DataFile-example/), [XML](CucumberReports/healthcare/cucumber.xml) and [json](CucumberReports/healthcare/cucumber.json).
+2. The test will create a folder `CucumberReports/healthcare/` where test reports in [HTML](https://kazurayam.github.io/katalon-studio-Cucumber-with-DataFile-example/CucumberReports/healthcare/index.html), [XML](CucumberReports/healthcare/cucumber.xml) and [json](CucumberReports/healthcare/cucumber.json).
 
 I suppose you will be impressed that the HTML report by Cucumber is very readable.
 
