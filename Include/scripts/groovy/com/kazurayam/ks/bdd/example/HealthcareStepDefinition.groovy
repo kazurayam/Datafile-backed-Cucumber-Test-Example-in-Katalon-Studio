@@ -38,7 +38,7 @@ class HealthcareStepDefinition {
 		WebUI.click(findTestObject('Page_CURA Healthcare Service/a_Make Appointment'))
 	}
 
-	@And("I enter a valid credential of (.*)")
+	@And("I enter a valid credential of (.*) and will retrieve password from Test Data")
 	def I_enter_valid_credential(String username) {
 		String password = credentials.lookupPasswordOf(username)
 		if (password != null) {
@@ -60,7 +60,7 @@ class HealthcareStepDefinition {
 		WebUI.closeBrowser()
 	}
 
-	@And("I enter an invalid credential of (.*)")
+	@And("I enter an invalid credential of (.*) and will retrieve password from Test Data")
 	def I_enter_invalid_credential(String username) {
 		String password = credentials.lookupPasswordOf(username)
 		if (password != null) {

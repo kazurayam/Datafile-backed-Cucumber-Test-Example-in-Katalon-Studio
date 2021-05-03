@@ -31,8 +31,36 @@ I will follow the Cucumber project described in the doc ["BDD Testing Framework 
 
 ## Import an CSV file to Test Data
 
-I created [a CSV file](Include/fixtures/healthcare_credentials.csv) that contains 2 rows of credentials (username, password, email address, phone number). The username column is supposed to be unique, which will uniquely identify each rows. I imported this CSV file to a Test Data named `HealthcareCredentials`. The following picture shows what I have got.
+I created [a CSV file](Include/fixtures/healthcare_credentials.csv) that contains 2 rows of credentials (username, password, email address, phone number). The username column is supposed to be unique, which will identify each rows. I imported this CSV file to a Test Data named `HealthcareCredentials`. The following picture shows what I have got.
 
-![HealthcareCredentials](docs/images/HealthcareCredentials.png)
+![HealthcareCredentials](docs/images/01_HealthcareCredentials.png)
+
+
+## Write a Cucumber Feature
+
+I created a Cucumber Feature [`CuraLogin.feature`](Include/features/healthcare/CuraLogin.feature). It is 90% similar to the [original](https://docs.katalon.com/katalon-studio/docs/cucumber-features-file.html#add-feature-files) but is different at a critical point. The original has the following code:
+
+```
+    ...
+    And I enter username <username> and password <password>
+    ...
+    Examples: 
+      | username | password           |
+      | John Doe | ThisIsNotAPassword |
+```
+
+Please note that the original Feature has the values of `username` and `password` hard-coded in the Feature file.
+On the other had my code looks like this:
+
+```
+    ...
+    And I enter username <username> and will retrieve password from Test Data
+    ...
+    Examples: 
+      | username |
+      | John Doe |
+```
+
+My Feature gives only `username` value, and it will internally retrieves `password` from the external Test Data `HealthcareCredentials`.
 
 

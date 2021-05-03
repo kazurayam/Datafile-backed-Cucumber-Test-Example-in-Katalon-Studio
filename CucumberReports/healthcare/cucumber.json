@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9088704966,
+              "duration": 6147820040,
               "status": "passed"
             },
             "line": 28,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 670781840,
+              "duration": 612359163,
               "status": "passed"
             },
             "line": 29,
@@ -36,11 +36,11 @@
           },
           {
             "result": {
-              "duration": 781092609,
+              "duration": 640379763,
               "status": "passed"
             },
             "line": 30,
-            "name": "I enter a valid credential of John Doe",
+            "name": "I enter a valid credential of John Doe and will retrieve password from Test Data",
             "match": {
               "arguments": [
                 {
@@ -54,7 +54,7 @@
           },
           {
             "result": {
-              "duration": 717011428,
+              "duration": 817591828,
               "status": "passed"
             },
             "line": 31,
@@ -66,7 +66,7 @@
           },
           {
             "result": {
-              "duration": 339665248,
+              "duration": 264785892,
               "status": "passed"
             },
             "line": 32,
@@ -96,7 +96,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5931084452,
+              "duration": 4781885032,
               "status": "passed"
             },
             "line": 40,
@@ -108,7 +108,7 @@
           },
           {
             "result": {
-              "duration": 575037577,
+              "duration": 568330915,
               "status": "passed"
             },
             "line": 41,
@@ -120,11 +120,11 @@
           },
           {
             "result": {
-              "duration": 539328707,
+              "duration": 672043064,
               "status": "passed"
             },
             "line": 42,
-            "name": "I enter an invalid credential of FakeName",
+            "name": "I enter an invalid credential of FakeName and will retrieve password from Test Data",
             "match": {
               "arguments": [
                 {
@@ -138,7 +138,7 @@
           },
           {
             "result": {
-              "duration": 649634490,
+              "duration": 613750907,
               "status": "passed"
             },
             "line": 43,
@@ -150,7 +150,7 @@
           },
           {
             "result": {
-              "duration": 273423692,
+              "duration": 338091965,
               "status": "passed"
             },
             "line": 44,

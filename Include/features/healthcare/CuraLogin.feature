@@ -27,7 +27,7 @@ Feature: Login Feature
   Scenario Outline: Login with a valid credential
     Given I navigate to Cura System homepage
     When I click Make Appointment button
-    And I enter a valid credential of <username>
+    And I enter a valid credential of <username> and will retrieve password from Test Data
     And I click Log in button 
 	Then I should be able to login successfully
 
@@ -39,7 +39,7 @@ Feature: Login Feature
   Scenario Outline: Login with an invalid credential
     Given I navigate to Cura System homepage
     When I click Make Appointment button
-    And I enter an invalid credential of <username>
+    And I enter an invalid credential of <username> and will retrieve password from Test Data
     And I click Log in button
 	Then I should NOT be able to login successfully
 

@@ -28,7 +28,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "I enter a valid credential of \u003cusername\u003e",
+  "name": "I enter a valid credential of \u003cusername\u003e and will retrieve password from Test Data",
   "keyword": "And "
 });
 formatter.step({
@@ -90,7 +90,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter a valid credential of John Doe",
+  "name": "I enter a valid credential of John Doe and will retrieve password from Test Data",
   "keyword": "And "
 });
 formatter.match({
@@ -138,7 +138,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "I enter an invalid credential of \u003cusername\u003e",
+  "name": "I enter an invalid credential of \u003cusername\u003e and will retrieve password from Test Data",
   "keyword": "And "
 });
 formatter.step({
@@ -200,7 +200,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter an invalid credential of FakeName",
+  "name": "I enter an invalid credential of FakeName and will retrieve password from Test Data",
   "keyword": "And "
 });
 formatter.match({
