@@ -1,7 +1,7 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Include/features/healthcare/CuraLogin.feature");
 formatter.feature({
   "name": "Login Feature",
-  "description": "  As a user, I want to login to Cura System\n  so that I can make an appointment.",
+  "description": "  Curaシステムにログインして予約を入れることができることを確認する。\n  Убедитесь, что вы можете войти в систему Cura и сделать заказ.\n  As a user, I want to login to Cura System so that I can make an appointment.",
   "keyword": "Feature",
   "tags": [
     {

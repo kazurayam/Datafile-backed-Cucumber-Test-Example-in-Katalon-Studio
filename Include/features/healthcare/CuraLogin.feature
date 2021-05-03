@@ -20,8 +20,9 @@
 @Login
 Feature: Login Feature
   
-  As a user, I want to login to Cura System
-  so that I can make an appointment.
+  Curaシステムにログインして予約を入れることができることを確認する。
+  Убедитесь, что вы можете войти в систему Cura и сделать заказ.
+  As a user, I want to login to Cura System so that I can make an appointment.
 
   @Valid
   Scenario Outline: Login with a valid credential
