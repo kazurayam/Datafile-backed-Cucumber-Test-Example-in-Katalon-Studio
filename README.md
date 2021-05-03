@@ -1,5 +1,29 @@
-Example of Cucumber Tests with Fixture as CSV File in Katalon Studio
+Datafile-backed Cucumber Test Example in Katalon Studio
 =====
 
+- author: kazurayam
+- date: May, 2021
 
-https://docs.katalon.com/katalon-studio/docs/cucumber-features-file.html#add-feature-files
+This is a small [Katalon](https://www.katalon.com/) Studio project for demonstratin purpose.
+You can download the zip of this project at the [Releases](https://www.katalon.com/) page, 
+unzip and open it with your Katalon Studio.
+
+This project was developed using Katalon Studio v7.9.1 but should work with older versions >= 7.0.
+
+# Problem to solve
+
+A [topic](https://forum.katalon.com/t/pass-common-test-data-in-entire-test-suite/54227/7) in
+the Katalon User Forum raised a question to me: *how can I create a Katalon Studio project 
+which is Behavior-Driven by Cucumber, and uses an external data file as fixture?*
+
+Katalon Document ["BDD Testing Framework (Cucumber integration)"](https://docs.katalon.com/katalon-studio/docs/cucumber-features-file.html) gives us a good example of Cucumber test in Katalon Studio. I went through it, and found it does not tell us how to utilise external data sources (CSV, Excel, DB) which is described in another document ["Run Test Case with an external data source"](https://docs.katalon.com/katalon-studio/docs/run-test-case-external-data.html). I realised that we need a missing document:
+
+- **How to run Cucumber Test with an external data source**. 
+
+
+# Solution
+
+A Cucumber Step Definition in Katalon Studio is an ordinary Groovy script, just like a Katalon Keyword. A Step Definition can call any Katalon API including `com.kms.katalon.core.testdata.TestDataFactory.findTestData(String testDataID)`. Therefore you can write a Cucumber Step Definition that instanciates `com.kms.katalon.core.testdata.TestData` which wraps external data sources such is CSV file, Excel book and DB. I will give you an example here.
+
+# Description
+
