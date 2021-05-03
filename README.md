@@ -38,7 +38,7 @@ I created [a CSV file](Include/fixtures/healthcare_credentials.csv) that contain
 
 ## Write a Cucumber Feature
 
-I created a Cucumber Feature [`CuraLogin.feature`](Include/features/healthcare/CuraLogin.feature). It is 90% similar to the [original](https://docs.katalon.com/katalon-studio/docs/cucumber-features-file.html#add-feature-files) but is different at a critical point. The original has the following code:
+I created a Cucumber Feature [`Include/features/healthcare/CuraLogin.feature`](Include/features/healthcare/CuraLogin.feature). It is 90% similar to the [original](https://docs.katalon.com/katalon-studio/docs/cucumber-features-file.html#add-feature-files) but is different at a critical point. The original has the following code:
 
 ```
     ...
@@ -61,6 +61,71 @@ On the other had my code looks like this:
       | John Doe |
 ```
 
-My Feature gives only `username` value, and it will internally retrieves `password` from the external Test Data `HealthcareCredentials`.
+My Feature gives only `username` value, and the associated Step Definition will internally retrieves `password` from the external Test Data `HealthcareCredentials`.
+
+
+
+
+## Write a Step Definition
+
+I wrote a Cucumber Step Definition [`Include/scripts/groovy/com/kazurayam/ks/bdd/example/HealthcareStepDefinition.groovy`](Include/scripts/groovy/com/kazurayam/ks/bdd/example/HealthcareStepDefinition.groovy).
+
+It starts with a constructor:
+
+```
+package com.kazurayam.ks.bdd.example
+
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import com.kms.katalon.core.testdata.TestData
+...
+class HealthcareStepDefinition {
+
+	// custom class that provides accessor methods
+	private final Credentials credentials
+
+	private static final String DATA_FILE_NAME = "HealthcareCredentials"
+
+	HealthcareStepDefinition() {
+		TestData td = findTestData(DATA_FILE_NAME)
+		credentials = new Credentials(td)
+	}
+
+...
+```
+
+The `HealthcareStepDefinition` class used a custom Groovy class [Keywords/com/kazurayam/ks/bdd/example/Credentials.groovy](Keywords/com/kazurayam/ks/bdd/example/Credentials.groovy). The `Credentials` class wraps the TestData object which indirectly wraps the external CSV data. The step definnitionn calls `lookupPasswordOf(username)` method of the `credentials` object to retrieve the `password` data of the given `username` out of the TestData; like this:
+
+```
+	@And("I enter a valid credential of (.*) and will retrieve password from Test Data")
+	def I_enter_valid_credential(String username) {
+		String password = credentials.lookupPasswordOf(username)
+		if (password != null) {
+			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_userName'), username)
+			WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
+		} else {
+			throw new IllegalStateException("usernamae ${username} is not found")
+		}
+	}
+```
+
+This is the way how I used the Katalon's Test Data feature in a Cucumber test.
+
+## How to run the Cucumber demo
+
+1. In Katalon Studio while you have this project opened, open `Test Cases/bdd/runCuraLoginFeatures` and just run it.
+2. The test will create a folder `CucumberReports/healthcare/` where test reports in HTML, XML and json.
+
+I suppose you will be impressed that the HTML report by Cucumber is very readable.
+
+## Plain Old Katalon Test Cases/Test Suite that do the same
+
+I made a set of Katalon Test Cases/Test Suite that do the same test senario as the Cucumber demo.
+
+- [Test Cases/plainKS/LoginValidCredential](Test Cases/plainKS/LoginValidCredential.tc)
+- [Test Cases/plainKS/LoginInvalidCredential](Test Cases/plainKS/LoginValidCredential.tc)
+
+These plain-old Katalon Test Cases refers to the Test Data `HealthcareCredentails` just in the same way as the Cucumber Step Defintion does. In fact, there is very little difference between them in terms of test fixture management.
+
+
 
 
