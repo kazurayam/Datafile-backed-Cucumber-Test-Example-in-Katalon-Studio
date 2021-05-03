@@ -117,7 +117,11 @@ This is the way how my Cucumber test uses the Katalon's Test Data feature. No my
 1. In Katalon Studio while you have this project opened, open `Test Cases/bdd/runCuraLoginFeatures` and just run it.
 2. The test will create a folder `CucumberReports/healthcare/` where test reports in [HTML](https://kazurayam.github.io/Datafile-backed-Cucumber-Test-Example-in-Katalon-Studio/CucumberReports/healthcare/index.html), [XML](CucumberReports/healthcare/cucumber.xml) and [json](CucumberReports/healthcare/cucumber.json).
 
-I suppose you will be impressed that the HTML report by Cucumber is very readable. Please be ware that the reports can be in any spoken languages: English, Chinese, Vietnamese for you, and Japanese for me.
+I suppose you will be impressed that the HTML report by Cucumber is very readable. 
+
+Please be note that the reports can be in any spoken languages: e.g, English, Russian and Japanese.
+
+![trilingual](docs/images/03_trilingual_report.png)
 
 ## Plain Old Katalon Test Cases/Test Suite that do the same
 
