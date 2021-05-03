@@ -119,7 +119,7 @@ This is the way how my Cucumber test uses the Katalon's Test Data feature. No my
 
 I suppose you will be impressed that the HTML report by Cucumber is very readable. 
 
-Please be note that the reports can be in any spoken languages: e.g, English, Russian and Japanese.
+Please note that the reports can be in any spoken languages: e.g, English, Russian and Japanese as follows.
 
 ![trilingual](docs/images/03_trilingual_report.png)
 
