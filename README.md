@@ -93,7 +93,7 @@ class HealthcareStepDefinition {
 ...
 ```
 
-The `HealthcareStepDefinition` class used a custom Groovy class [Keywords/com/kazurayam/ks/bdd/example/Credentials.groovy](Keywords/com/kazurayam/ks/bdd/example/Credentials.groovy). The `Credentials` class wraps the TestData object which indirectly wraps the external CSV data. The step definnitionn calls `lookupPasswordOf(username)` method of the `credentials` object to retrieve the `password` data of the given `username` out of the TestData; like this:
+The `HealthcareStepDefinition` class used a custom Groovy class [Keywords/com/kazurayam/ks/bdd/example/Credentials.groovy](Keywords/com/kazurayam/ks/bdd/example/Credentials.groovy). The `Credentials` class wraps the TestData object which indirectly wraps the external CSV data. The step definition calls `lookupPasswordOf(username)` method of the `credentials` object to retrieve the `password` data of the given `username` out of the TestData; like this:
 
 ```
 	@And("I enter a valid credential of (.*) and will retrieve password from Test Data")
@@ -113,7 +113,7 @@ This is the way how I used the Katalon's Test Data feature in a Cucumber test.
 ## How to run the Cucumber demo
 
 1. In Katalon Studio while you have this project opened, open `Test Cases/bdd/runCuraLoginFeatures` and just run it.
-2. The test will create a folder `CucumberReports/healthcare/` where test reports in HTML, XML and json.
+2. The test will create a folder `CucumberReports/healthcare/` where test reports in [HTML](CucumberReports/healthcare/index.html), XML(CucumberReports/healthcare/cucumber.xml) and json(CucumberReports/healthcare/cucumber.json).
 
 I suppose you will be impressed that the HTML report by Cucumber is very readable.
 
